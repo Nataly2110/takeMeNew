@@ -1,0 +1,285 @@
+@import "_style-null";
+
+body {
+   font-family: Roboto, sans-serif;
+}
+
+.wrapper {
+   background-color: #f6f6f6;
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1210px;
+   width: 100%;
+   padding: 0 20px;
+   margin: 0px auto;
+  
+}
+
+.divide {
+   width: 100%;
+   height: 20px; 
+   background-color: #d7d7d7;
+   display: block;
+}
+
+.logo {
+   font-family: KaushanScript, sans-serif;
+   font-size: 48px;
+   line-height: 4px;
+   font-weight: 400;
+   font-style: italic;
+   color: #3ec6ff;
+}
+
+.header {
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 115px;
+   }
+}
+
+.menu {
+   
+   li {
+       position: relative;
+   }
+
+   &__link {
+      font-size: 18px;
+      line-height: 4px;
+      font-weight: 400;
+      color: #343434;
+   }
+   &__list {
+      display: flex;
+      >li {
+         margin-right: 45px;
+         &:last-child {
+            margin-right: 0;
+         }
+         &:hover .sub-menu__list {
+          display: block;
+}
+      }
+   }
+}
+
+
+
+.sub-menu, .sub-sub-menu {
+   
+   &__link {
+      font-size: 18px;
+      line-height: 4px;
+      font-weight: 400;
+      color: #343434;
+   }
+}
+
+.sub-menu {
+   &__list {
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 0;
+   }
+}
+
+.subscribe {
+
+   &__container {
+    
+
+      padding: 90px 0;
+   }
+   &__text {
+      
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 400;
+      color: #868686;
+      padding-right: 20px;
+      
+      h2 {
+      font-size: 48px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #868686;
+      padding-bottom: 30px;
+      text-align: center;
+   } 
+   }
+   &__button {
+
+      button {
+         width: 272px;
+         height: 50px;
+         color: #ffffff;;
+         background-color: #3ec6ff;
+         border-radius: 6px;
+         display: block;
+         margin: 30px auto;
+      }
+   }
+}
+
+@media (min-width:767px) {
+   .subscribe {
+
+   &__container {
+      display: flex;
+   }
+   &__text {
+      width: 60%;
+
+      h2 {
+      text-align: start;
+      }
+      p {
+         padding-right: 15%;
+      }
+   }
+   &__button {
+     width: 40%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+      button {
+         justify-self: flex-end;
+      }
+   }
+}
+}
+
+.section {
+   overflow: hidden;
+		
+
+		&__content {
+         display: flex;
+         align-items: center;
+         flex: 0 0 100%;
+         display: flex;  
+      }
+      &__container {
+          
+		}
+
+		&__body {
+         
+         font-size: 16px;
+         
+		}
+
+		&__form {
+		}
+
+		&__image {
+         
+         img {
+            width: 100%;
+         }
+		}
+}
+@media (min-width:767px) {
+   .section {
+      display: flex;
+      
+      &__content {}
+         
+      &__image {
+         position: relative;
+         flex: 0 0 calc(((100vw - 40px) * 0.4) + 20px);
+         padding: 0 0 30% 0;
+         transform: translate(-100%, 0);
+         
+         img { 
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            max-width: 100%;
+         }
+      }
+      &__body {
+         width: 60%;
+         padding: 60px 130px 60px 0;
+      }
+      }
+   }
+
+.contact {
+
+      &__form {
+         display: grid;
+         grid-template-rows: 50px 50px 50px 50px 50px 130px;
+         grid-template-columns: repeat(2, minmax(30px, 1fr)); 
+         grid-column-gap: 30px;
+      }
+
+		&__title {
+         font-size: 48px;
+         line-height: 1.2;
+         font-weight: 700;
+         color: #868686;
+         margin-bottom: 50px;
+		}
+
+      &__first-name {
+               
+		}
+		&__last-name {
+               
+		}
+		&__email {
+                
+		}
+		&__tel {
+
+		&__textarea {
+      
+		}
+}
+.form {
+
+		&__grid {
+		}     
+      &__item {
+         border-radius: 4px;
+      }
+		&__first-name {
+              
+		}
+		&__last-name {
+         
+		}
+		&__email {
+        
+		}
+      &__tel {
+       
+      }
+		&__textarea {
+       grid-column: span 2;
+		}
+      &__submit {
+      }
+}
+}
+
+@media (min-width:1210px) {
+
+   .section__image {
+      flex: 0 0 calc(100vw - (((100vw - 1210px) / 2) + ((1210px - 40px) * 0.6) + 20px));
+   }
+}
