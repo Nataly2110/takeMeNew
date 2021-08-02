@@ -12,7 +12,6 @@
 </head>
 <body>
    <div class="wrapper">
-      
       <header class="header">
          <div class="container">
             <div class="header__body">
@@ -40,11 +39,22 @@
                </nav>
             </div>
             </div>
+            <div class="divide"></div>
             </header>
-      
-      <div class="divide"></div>
-      
       <main>
+          <section class="section promo fullscreen">
+            <div class="section__container container">
+               <h1 class="promo__header">Find Your Dream Vacation Location</h1>
+               <p class="promo__text">Search hundreds of locations from around the world and find your perfect vacation location.</p>
+               <form action="#" method="GET" class="promo__search">
+                  <input type="text" class="promo__search_country" placeholder="Country or ZIP code">
+                  <input type="text" class="promo__search_transporation" placeholder="Transportation">
+                  <input type="text" class="promo__search_number" placeholder="Number of people">
+                  <input type="text" class="promo__search_submit" placeholder="Search">
+               </form>
+            </div>
+         </section>
+         <div class="divide"></div>
          <section class="section subscribe">
             <div class="container">
                <div class="subscribe__container">
@@ -65,7 +75,6 @@
                   <div class="section__container container">
                      <div class="section__body contact">
                            <h2 class="contact__title">Contact Us</h2>
-                           
                               <form action="#" method="GET" class="contact__form">
                                  <label for="first-name" class="contact__first-name ">First Name</label>
                                  <label for="last-name" class="contact__last-name "> Last Name</label>
@@ -78,7 +87,6 @@
                                  <label for="textarea" class="contact__textarea ">Message</label>
                                  <textarea name="textarea" class="form__textarea form__item"></textarea>
                                  <input type="submit" class="form__submit form__item">
-                          
                            </form>
                      </div>
                   </div>
@@ -89,8 +97,18 @@
          </section>
          <div class="divide"></div>
          <section class="section">
-            .
+            <div class="map">
+               <iframe class="map__iframe"
+                  src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d79257.284869665!2d-0.8229233!3d51.6270531!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1627892924582!5m2!1sen!2sua"
+                   allowfullscreen="" loading="lazy"></iframe>
+            </div>
          </section>
+         <section class="section">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YsMrvWgK6V4" title="YouTube video player"
+               frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen></iframe>
+         </section>
+         
       </main>
       <footer></footer>
    </div>
