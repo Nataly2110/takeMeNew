@@ -1,20 +1,69 @@
 @import "_style-null";
 
-/*$fontFamily
-$fontSize
-$mainColor
-$minWidth
-$maxWidth
-$maxWidthContainer
-@mixin button {} 
-@mixin heading {}
-@ mixin formInput
+$fontFamily: Roboto, sans-serif;
+$fontSize: 16px;
+$fontWeight: 400;
+$white: #ffffff;
+$black: #343434;
+$grey: #868686;
+$blue: #3ec6ff;
+$maxWidthContainer: 1210px;
+
+@mixin input {
+   max-width: 272px;
+   min-height: 50px;
+   background-color: #ffffff;
+   border-radius: 4px;
+   line-height: 1.2;
+   padding-left: 30px;
+   color: #b7b7b7;
+   text-align: left;
+} 
+
+@mixin shortButton {
+   width: 172px;
+   min-height: 50px;
+   background-color: #3ec6ff;
+   border-radius: 6px;
+   text-align: center;
+   padding: 0;
+   line-height: 1.2;
+   color: #ffffff;
+   &:hover {
+      cursor: pointer;
+      color: #3ec6ff;
+      background-color: #ffffff;
+      border: 2px solid #3ec6ff;
+   } 
+}
+
+@mixin longButton {
+   width: 272px;
+   min-height: 50px;
+   background-color: #3ec6ff;
+   border-radius: 6px;
+   text-align: center;
+   padding: 0;
+   line-height: 1.2;
+   color: #ffffff;
+   &:hover {
+      cursor: pointer;
+      color: #3ec6ff;
+      background-color: #ffffff;
+      border: 2px solid #3ec6ff;
+   } 
+}
+
+/*
+@mixin heading {
+}
 */
 
 
 html, body {
    height: 100%;
-   font-family: Roboto, sans-serif;
+   font-family: $fontFamily;
+   font-size: $fontSize;
 }
 
 .wrapper {
@@ -24,6 +73,7 @@ html, body {
    flex: 1 1 auto;
    min-height: 100vh;
    overflow: hidden;
+   
 }
 
 .container {
@@ -40,17 +90,24 @@ html, body {
    display: block;
 }
 
+
 .logo {
-   font-family: KaushanScript, sans-serif;
+   width: 32.5%;
+   font-family: "Kaushan Script", sans-serif;
    font-size: 48px;
    line-height: 4px;
    font-weight: 400;
    font-style: italic;
-   color: #3ec6ff;
+   color: $blue;
+   margin-right: 25px;
 }
 
 .header {
 
+  
+   background-color: #ffffff;
+
+  
    &__body {
       display: flex;
       justify-content: space-between;
@@ -73,8 +130,10 @@ html, body {
    }
    &__list {
       display: flex;
+      flex-wrap: wrap;
       >li {
          margin-right: 45px;
+         margin-bottom: 15px;
          &:last-child {
             margin-right: 0;
          }
@@ -121,17 +180,25 @@ html, body {
    }
 }
 .promo {
+   input {
+      @include input;
+   }
    &__header {
       font-family: Roboto;
       font-size: 48px;
       line-height: 1.2;
       font-weight: 700;
       color: #ffffff;
+      margin-bottom: 48px;
+
 }
    &__text {
+      margin-bottom: 79px;
+      color: #ffffff;
 }
    &__search {
-
+      display: flex;
+      margin:  0 auto;
       &_country {
 
       }
@@ -141,16 +208,48 @@ html, body {
       &_number {
       }
       &_submit {
+         @include shortButton; 
+      }
+      input {
+         margin-bottom: 10px;
+         &:not(:last-child) {
+         margin-right: 28px; 
+      }
       }
 }
 }
+
+@media (max-width: 880px) {
+   .promo {
+      &__search {
+         flex-direction: column;
+         justify-content: center;
+      }
+      input {
+         min-width: 330px;
+      }
+   }
+      }
+
+@media (max-width: 520px) {
+  .promo {
+      &__search {
+      input {
+         min-width: 272px;
+         &:not(:last-child) {
+            margin-right: 0;
+         }
+      }
+   }
+      }
+   }
 
 .subscribe {
 
    &__container {
     
 
-      padding: 90px 0;
+      padding: 60px 0;
    }
    &__text {
       
@@ -172,8 +271,8 @@ html, body {
    &__button {
 
       button {
+         @include longButton;
          width: 272px;
-         height: 50px;
          color: #ffffff;;
          background-color: #3ec6ff;
          border-radius: 6px;
@@ -188,6 +287,7 @@ html, body {
 
    &__container {
       display: flex;
+      padding: 90px 0;
    }
    &__text {
       width: 60%;
@@ -218,7 +318,8 @@ html, body {
          display: flex;
          align-items: center;
          flex: 0 0 100%;
-         display: flex;  
+         display: flex; 
+         padding: 60px 0px; 
       }
       &__container {
           
@@ -276,6 +377,22 @@ html, body {
          grid-template-rows: 50px 50px 50px 50px 50px 130px;
          grid-template-columns: repeat(2, minmax(30px, 1fr)); 
          grid-column-gap: 30px;
+
+         :last-child {
+            margin-top: 40px;
+         }
+
+         label {
+            align-self: center;
+         }
+         input, textarea {
+            padding-left: 30px;
+            color: #b7b7b7;
+         }
+         textarea {
+            padding-top: 19px;
+         }
+         
       }
 
 		&__title {
@@ -301,6 +418,8 @@ html, body {
       
 		}
 }
+
+
 .form {
 
 		&__grid {
@@ -324,6 +443,7 @@ html, body {
        grid-column: span 2;
 		}
       &__submit {
+         @include longButton;
       }
 }
 }
@@ -370,6 +490,10 @@ html, body {
    }
       &__image {
          width: 25%;
+         img {
+            object-fit: cover;
+         }
+         
 
       }
       &__promo {
@@ -392,16 +516,9 @@ html, body {
             margin-bottom: 45px;
          }
       &__button {
-            width: 272px;
-            height: 50px;
-            background-color: #3ec6ff;
-            border-radius: 6px;
-            font-size: 16px;
-            line-height: 1.2;
-            font-weight: 400;
-            color: #ffffff;
-      }
- 
+            @include longButton;
+
+      } 
 }
 
 
