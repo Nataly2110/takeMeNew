@@ -553,8 +553,7 @@ html, body {
 }
 
 .app__image img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-width: 100%;
 }
 
 .app__promo {
@@ -596,4 +595,21 @@ html, body {
   color: #3ec6ff;
   background-color: #ffffff;
   border: 2px solid #3ec6ff;
+}
+
+@media (max-width: 800px) {
+  .app__image {
+    display: none;
+  }
+  .app__promo {
+    width: 100%;
+  }
+  .app__head {
+    font-size: 30px;
+    text-align: center;
+  }
+  .app__button {
+    display: block;
+    margin: 0 auto;
+  }
 }

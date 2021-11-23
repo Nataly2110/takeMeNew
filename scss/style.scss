@@ -491,7 +491,7 @@ html, body {
       &__image {
          width: 25%;
          img {
-            object-fit: cover;
+            max-width: 100%;
          }
          
 
@@ -521,4 +521,27 @@ html, body {
       } 
 }
 
+@media (max-width: 800px) {
+   .app__container {
+
+   }
+   .app__image {
+    display: none;
+
+      img {
+        
+      }
+   }
+   .app__promo {
+    width: 100%;
+   }
+   .app__head {
+      font-size: 30px;
+      text-align: center;
+   }
+   .app__button {
+      display: block;
+      margin: 0 auto;
+   }
+} 
 
