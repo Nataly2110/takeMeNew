@@ -71,10 +71,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-/*
-@mixin heading {
-}
-*/
 html, body {
   height: 100%;
   font-family: Roboto, sans-serif;
@@ -218,12 +214,6 @@ body._touch .menu__arrow {
   margin: 0 0 0 5px;
 }
 
-body._touch .menu__arrow.menu__arrow_sub {
-  border-left: 10px solid #000;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-}
-
 body._touch .menu__list > li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,6 +266,55 @@ body._touch .menu__list > li._active .menu__arrow {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu__icon {
+    z-index: 10;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .menu__icon:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #3ec6ff;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .menu__icon:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #3ec6ff;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .menu__icon span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 10%;
+    background-color: #3ec6ff;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -webkit-transform: scale(1) translate(0px, -50%);
+        -ms-transform: scale(1) translate(0px, -50%);
+            transform: scale(1) translate(0px, -50%);
   }
 }
 
