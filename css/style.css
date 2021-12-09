@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 html, body {
   height: 100%;
   font-family: Roboto, sans-serif;
-  font-size: 16px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1080));
 }
 
 .wrapper {
@@ -356,7 +356,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .promo__header {
   font-family: Roboto;
-  font-size: calc(38px + 10 * ((100vw - 320px) / (1400 - 320)));
+  font-size: calc(38px + 10 * ((100vw - 320px) / 1080));
   line-height: 1.2;
   font-weight: 700;
   color: #ffffff;
@@ -441,7 +441,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .subscribe__text h2 {
-  font-size: calc(38px + 10 * ((100vw - 320px) / (1400 - 320)));
+  font-size: calc(38px + 10 * ((100vw - 320px) / 1080));
   line-height: 1.2;
   font-weight: 700;
   color: #868686;
@@ -594,7 +594,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .contact__title {
-  font-size: calc(38px + 10 * ((100vw - 320px) / (1400 - 320)));
+  font-size: calc(38px + 10 * ((100vw - 320px) / 1080));
   line-height: 1.2;
   font-weight: 700;
   color: #868686;
