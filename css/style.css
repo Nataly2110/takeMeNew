@@ -216,8 +216,6 @@ body._touch .menu__arrow {
 
 body._touch .menu__list > li {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 body._touch .menu__link {
@@ -358,7 +356,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .promo__header {
   font-family: Roboto;
-  font-size: 48px;
+  font-size: calc(38px + 10 * ((100vw - 320px) / (1400 - 320)));
   line-height: 1.2;
   font-weight: 700;
   color: #ffffff;
@@ -416,6 +414,9 @@ body._touch .menu__list > li._active .menu__arrow {
   .promo input {
     min-width: 330px;
   }
+  .promo__header {
+    margin-top: 130px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -440,7 +441,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .subscribe__text h2 {
-  font-size: 48px;
+  font-size: calc(38px + 10 * ((100vw - 320px) / (1400 - 320)));
   line-height: 1.2;
   font-weight: 700;
   color: #868686;
@@ -593,7 +594,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .contact__title {
-  font-size: 48px;
+  font-size: calc(38px + 10 * ((100vw - 320px) / (1400 - 320)));
   line-height: 1.2;
   font-weight: 700;
   color: #868686;
