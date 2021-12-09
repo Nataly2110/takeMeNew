@@ -9,6 +9,7 @@ $grey: #868686;
 $blue: #3ec6ff;
 $maxWidthContainer: 1210px;
 
+
 @mixin input {
    max-width: 272px;
    min-height: 50px;
@@ -54,12 +55,13 @@ $maxWidthContainer: 1210px;
    } 
 }
 
-
 html, body {
    height: 100%;
    font-family: $fontFamily;
-   font-size: $fontSize;
+   
+   font-size: 16px;
 }
+   
 
 .wrapper {
    background-color: #f6f6f6;
@@ -182,7 +184,7 @@ body._touch {
       
    }  
     .menu__list > li {
-      display: flex;
+      display: -webkit-box; //при обычном флексе возникает проблема с высотой всего меню- оно сильно сужается и пункты налазят друг на друга. почему???
    }
    .menu__link {
       flex: 1 1 auto;
@@ -287,12 +289,11 @@ body._touch .menu__list > li._active .menu__arrow {
    }
    &__header {
       font-family: Roboto;
-      font-size: 48px;
+      font-size: calc(38px + 10 * ((100vw - 320px) / (1400 - 320)));
       line-height: 1.2;
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 48px;
-
 }
    &__text {
       margin-bottom: 79px;
@@ -330,6 +331,9 @@ body._touch .menu__list > li._active .menu__arrow {
       input {
          min-width: 330px;
       }
+      &__header {
+         margin-top: 130px;
+      }
    }
       }
 
@@ -362,7 +366,7 @@ body._touch .menu__list > li._active .menu__arrow {
       padding-right: 20px;
       
       h2 {
-      font-size: 48px;
+      font-size: calc(38px + 10 * ((100vw - 320px) / (1400 - 320)));
       line-height: 1.2;
       font-weight: 700;
       color: #868686;
@@ -498,7 +502,7 @@ body._touch .menu__list > li._active .menu__arrow {
       }
 
 		&__title {
-         font-size: 48px;
+         font-size: calc(38px + 10 * ((100vw - 320px) / (1400 - 320)));
          line-height: 1.2;
          font-weight: 700;
          color: #868686;
