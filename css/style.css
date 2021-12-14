@@ -747,6 +747,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .video__item iframe {
   width: 683px;
   height: 452px;
+  border: 0;
 }
 
 .video__item:hover {
