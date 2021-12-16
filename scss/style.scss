@@ -254,12 +254,25 @@ body._touch .menu__list > li._active .menu__arrow {
       width: 30px;
       height: 18px;
       cursor: pointer;
+         &._active {
+            span {
+               transform: scale(0) translate(0px, -50%);
+            }
+            &::before {
+               top: 50%;
+               transform: rotate(-45deg) translate(0px,-50%);
+            }
+            &::after {
+               bottom: 50%;
+               transform: rotate(45deg) translate(0px, 50%);
+            }
+         }
      
          &:after {
             content: "";
             position: absolute;
             left: 0;
-            top: 0;
+            bottom: 0;
             width: 100%;
             height: 10%;
             background-color: $blue;
@@ -269,7 +282,7 @@ body._touch .menu__list > li._active .menu__arrow {
             content: "";
             position: absolute;
             left: 0;
-            bottom: 0;
+            top: 0;
             width: 100%;
             height: 10%;
             background-color: $blue;
