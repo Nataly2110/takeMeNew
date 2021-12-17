@@ -455,12 +455,9 @@ body._touch .menu__list > li._active .menu__arrow {
 .subscribe {
 
    &__container {
-    
-
-      padding: 60px 0;
+      padding: 20px 0;
    }
    &__text {
-      
       font-size: 16px;
       line-height: 1.2;
       font-weight: 400;
@@ -477,15 +474,11 @@ body._touch .menu__list > li._active .menu__arrow {
    } 
    }
    &__button {
-
       button {
          @include longButton;
-         width: 272px;
-         color: #ffffff;;
-         background-color: #3ec6ff;
-         border-radius: 6px;
          display: block;
          margin: 30px auto;
+         margin-bottom: 0;
       }
    }
 }
@@ -521,41 +514,39 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .contact-us {
    overflow: hidden;
+   background-image: url(../img/contact-us.png);
+   background-size: cover;
 
 		&__content {
          display: flex;
          align-items: center;
          flex: 0 0 100%;
          display: flex; 
-         padding: 60px 0px; 
+         padding: 20px 0px; 
+         opacity: 0.8;
       }
-      &__container {
-          
+      &__container {    
 		}
-
-		&__body {
-         
-         font-size: 16px;
-         
+		&__body { 
+         @include adaptiveFont(16, 12); 
 		}
-
 		&__form {
 		}
-
 		&__image {
-         
-         img {
-            width: 100%;
-         }
+         display: none;
 		}
 }
 @media (min-width:767px) {
    .contact-us {
       display: flex;
-      
-      &__content {}
+      background: none;
+      &__content {
+         padding: 60px 0px; 
+         opacity: 1;
+      }
          
       &__image {
+         display: flex;
          position: relative;
          flex: 0 0 calc(((100vw - 40px) * 0.4) + 20px);
          padding: 0 0 30% 0;
@@ -576,6 +567,12 @@ body._touch .menu__list > li._active .menu__arrow {
          padding: 60px 130px 60px 0;
       }
       }
+      .contact {
+        
+         &__title {
+            margin-bottom: 50px;
+         }
+      }
    }
 
 .contact {
@@ -592,10 +589,12 @@ body._touch .menu__list > li._active .menu__arrow {
 
          label {
             align-self: center;
+            @include adaptiveFont(16, 14);
          }
          input, textarea {
             padding-left: 30px;
             color: #b7b7b7;
+            @include adaptiveFont(14, 12);
          }
          textarea {
             padding-top: 19px;
@@ -608,7 +607,6 @@ body._touch .menu__list > li._active .menu__arrow {
          line-height: 1.2;
          font-weight: 700;
          color: #868686;
-         margin-bottom: 50px;
 		}
 
       &__first-name {
@@ -753,14 +751,14 @@ body._touch .menu__list > li._active .menu__arrow {
       text-align: center;
    }
    .app__button {
-      display: b;
+      display: block;
       margin: 0 auto;
       margin-bottom: 20px;
    }
 } 
 
 .footer-top {
-   padding: 40px 0 20px 0;
+   padding: 20px 0;
    
    &__container {
       
@@ -823,8 +821,7 @@ body._touch .menu__list > li._active .menu__arrow {
    }
    &__subscribe {
       display: flex;
-      flex-direction: column;
-      
+      justify-content: space-around;
    }
    &__button {
       color: #ffffff;
@@ -904,6 +901,9 @@ body._touch .menu__list > li._active .menu__arrow {
          justify-content: space-between;
          margin: 0 -15px -20px -15px;
       }
+      &__subscribe {
+         flex-direction: column;
+      }
 }
 .footer-top {
 
@@ -914,5 +914,9 @@ body._touch .menu__list > li._active .menu__arrow {
       width: 40%;
    }
    }
-
+}
+@media (max-width: 768px) {
+    .footer__column {
+         min-width: 80px;
+      }
 }

@@ -87,3 +87,11 @@ if (menuLinksDataGoto.length > 0) {
    }
 }
 
+/* function abbrevName(name) {
+   let names = name.split(" "); 
+   let init = names.map(function (i) { return i[0].toUpperCase() }).join(".");
+   
+   return init
+} 
+abbrevName("fname lname");
+*/
