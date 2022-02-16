@@ -112,7 +112,9 @@ body._lock {
 }
 
 .logo {
-  width: 32.5%;
+  -webkit-box-flex: 32.5%;
+      -ms-flex: 32.5% 1 1;
+          flex: 32.5% 1 1;
   font-family: "Kaushan Script", sans-serif;
   font-size: 48px;
   line-height: 4px;
@@ -536,6 +538,15 @@ body._touch .menu__list > li._active .menu__arrow {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .promo__search input:not(:last-child) {
+    margin-right: 0;
+  }
+  .promo__search button {
+    margin-right: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
   .promo input {
     min-width: 330px;
   }
@@ -563,6 +574,10 @@ body._touch .menu__list > li._active .menu__arrow {
   font-weight: 400;
   color: #868686;
   padding-right: 20px;
+}
+
+.subscribe__text p {
+  text-align: justify;
 }
 
 .subscribe__text h2 {
@@ -605,9 +620,7 @@ body._touch .menu__list > li._active .menu__arrow {
   }
   .subscribe__text {
     width: 60%;
-  }
-  .subscribe__text h2 {
-    text-align: start;
+    text-align: justify;
   }
   .subscribe__text p {
     padding-right: 15%;
