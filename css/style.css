@@ -449,6 +449,7 @@ body._touch .menu__list > li._active .menu__arrow {
   background-color: #ffffff;
   border-radius: 4px;
   line-height: 1.2;
+  font-size: 16px;
   padding-left: 30px;
   color: #b7b7b7;
   text-align: left;
@@ -484,6 +485,7 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 0;
   line-height: 1.2;
   color: #ffffff;
+  font-size: 16px;
 }
 
 .promo__search_submit:hover {
@@ -510,6 +512,7 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 0;
   line-height: 1.2;
   color: #ffffff;
+  font-size: 16px;
 }
 
 .promo__search button:hover {
@@ -576,6 +579,7 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 0;
   line-height: 1.2;
   color: #ffffff;
+  font-size: 16px;
   display: block;
   margin: 30px auto;
   margin-bottom: 0;
@@ -748,6 +752,7 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 0;
   line-height: 1.2;
   color: #ffffff;
+  font-size: 16px;
 }
 
 .contact .form__submit:hover {
@@ -858,6 +863,7 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 0;
   line-height: 1.2;
   color: #ffffff;
+  font-size: 16px;
   display: block;
   margin: 0 auto;
 }
