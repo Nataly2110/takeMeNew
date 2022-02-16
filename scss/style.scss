@@ -109,7 +109,7 @@ body._lock {
 
 
 .logo {
-   width: 32.5%;
+   flex: 32.5% 1 1;
    font-family: "Kaushan Script", sans-serif;
    font-size: 48px;
    line-height: 4px;
@@ -440,6 +440,13 @@ body._touch .menu__list > li._active .menu__arrow {
       &__search {
          flex-direction: column;
          justify-content: center;
+         input:not(:last-child) {
+            margin-right:0;
+         }
+         button {
+            margin-right:0;
+            align-self: center;
+         }
       }
       input {
          min-width: 330px;
@@ -474,6 +481,9 @@ body._touch .menu__list > li._active .menu__arrow {
       font-weight: 400;
       color: #868686;
       padding-right: 20px;
+      p {
+         text-align: justify
+      }
       
       h2 {
       @include adaptiveFont(48, 38);
@@ -494,6 +504,7 @@ body._touch .menu__list > li._active .menu__arrow {
    }
 }
 
+
 @media (min-width:767px) {
    .subscribe {
 
@@ -503,9 +514,8 @@ body._touch .menu__list > li._active .menu__arrow {
    }
    &__text {
       width: 60%;
-
+      text-align: justify;
       h2 {
-      text-align: start;
       }
       p {
          padding-right: 15%;
@@ -668,6 +678,7 @@ body._touch .menu__list > li._active .menu__arrow {
 		}
       &__submit {
          @include longButton;
+       
       }
 }
 }
