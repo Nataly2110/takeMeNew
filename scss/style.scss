@@ -109,9 +109,11 @@ body._lock {
    line-height: 4px;
    font-weight: 400;
    font-style: italic;
-   color: $blue;
    margin-right: 25px;
    z-index: 5;
+   a {
+      color: $blue;
+   }
 }
 
 .header {
@@ -174,8 +176,8 @@ body._lock {
       left: 0;
       background-color: $blue;
       border-radius: 20px;
-      min-width: 100px;
-      //z-index: 5;
+      min-width: 150px;
+      z-index: 5;
       padding: 15px;
 }
 }
