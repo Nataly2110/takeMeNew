@@ -514,10 +514,10 @@ body._touch .menu__list > li._active .menu__arrow {
    &__button {
      width: 40%;
      display: flex;
-     justify-content: center;
+     justify-content: flex-end;
      align-items: center;
       button {
-         justify-self: flex-end;
+         margin: 0;
       }
    }
 }
@@ -797,14 +797,16 @@ body._touch .menu__list > li._active .menu__arrow {
 .footer-bottom {
    padding-bottom: 40px;
    font-size: 14px;
-   &::before {
+   border-top: 1px solid #e2e2e2;
+   padding-top: 40px;
+  /* &::before {
       display: block;
       content: "";
       width: 100%;
       height: 1px;
       background-color: #e2e2e2;
       margin-bottom: 40px;
-   }
+   }*/
    &__container {
       display: flex;
       justify-content: space-between;
