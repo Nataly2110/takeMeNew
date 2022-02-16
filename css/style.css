@@ -493,12 +493,30 @@ body._touch .menu__list > li._active .menu__arrow {
   border: 2px solid #3ec6ff;
 }
 
-.promo__search input {
+.promo__search input, .promo__search button {
   margin-bottom: 10px;
 }
 
-.promo__search input:not(:last-child) {
+.promo__search input:not(:last-child), .promo__search button:not(:last-child) {
   margin-right: 28px;
+}
+
+.promo__search button {
+  width: 172px;
+  min-height: 50px;
+  background-color: #3ec6ff;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.promo__search button:hover {
+  cursor: pointer;
+  color: #3ec6ff;
+  background-color: #ffffff;
+  border: 2px solid #3ec6ff;
 }
 
 @media (max-width: 880px) {

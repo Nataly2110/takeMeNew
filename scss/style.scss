@@ -417,12 +417,15 @@ body._touch .menu__list > li._active .menu__arrow {
       &_submit {
          @include shortButton; 
       }
-      input {
+      input, button {
          margin-bottom: 10px;
          &:not(:last-child) {
          margin-right: 28px; 
       }
       }
+       button {
+          @include shortButton;
+       }
 }
 }
 
