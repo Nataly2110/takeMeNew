@@ -20,6 +20,9 @@ $maxWidthContainer: 1210px;
    padding-left: 30px;
    color: #b7b7b7;
    text-align: left;
+   &:focus {
+    border: 1px solid #3ec6ff;
+      }
 } 
 
 @mixin shortButton {
@@ -603,10 +606,16 @@ body._touch .menu__list > li._active .menu__arrow {
          input, textarea {
             padding-left: 30px;
             color: #b7b7b7;
-            @include adaptiveFont(14, 12);
+         }
+         input {
+            @include input;
          }
          textarea {
             padding-top: 19px;
+            font-size: 16px;
+            &:focus {
+               border: 1px solid #3ec6ff;
+            }
          }
          
       }

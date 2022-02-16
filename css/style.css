@@ -455,6 +455,10 @@ body._touch .menu__list > li._active .menu__arrow {
   text-align: left;
 }
 
+.promo input:focus {
+  border: 1px solid #3ec6ff;
+}
+
 .promo__header {
   font-family: Roboto;
   font-size: calc(38px + 10 * ((100vw - 320px) / 1080));
@@ -721,11 +725,31 @@ body._touch .menu__list > li._active .menu__arrow {
 .contact__form input, .contact__form textarea {
   padding-left: 30px;
   color: #b7b7b7;
-  font-size: calc(12px + 2 * ((100vw - 320px) / 1080));
+}
+
+.contact__form input {
+  max-width: 272px;
+  min-height: 50px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  line-height: 1.2;
+  font-size: 16px;
+  padding-left: 30px;
+  color: #b7b7b7;
+  text-align: left;
+}
+
+.contact__form input:focus {
+  border: 1px solid #3ec6ff;
 }
 
 .contact__form textarea {
   padding-top: 19px;
+  font-size: 16px;
+}
+
+.contact__form textarea:focus {
+  border: 1px solid #3ec6ff;
 }
 
 .contact__title {
