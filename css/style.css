@@ -190,7 +190,7 @@ body._lock {
 
 .menu__sub-list {
   position: absolute;
-  top: 30px;
+  top: 25px;
   left: 0;
   background-color: #3ec6ff;
   border-radius: 20px;
@@ -790,6 +790,8 @@ body._touch .menu__list > li._active .menu__arrow {
   line-height: 1.2;
   color: #ffffff;
   font-size: 16px;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .contact .form__submit:hover {
