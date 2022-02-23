@@ -94,7 +94,7 @@ body._lock {
 }
 
 .container {
-   max-width: 1210px;
+   max-width: 1210px; //1170px + 20px padding-left and right
    width: 100%;
    padding: 0 20px;
    margin: 0px auto;
@@ -698,27 +698,34 @@ body._touch .menu__list > li._active .menu__arrow {
    height: 50vh;
    border: 0;
 }
+
 .video {
-   width: 100%;
-   height: 70vh;
+   min-width: 100%;
    background: url(../img/dubai/dubai-bg.png);
    background-size: cover;
-   position: relative; /*контейнер для абсолют позиционированного блока*/
-      &__item {
-         position: absolute; /* один из приемов для центрирования*/
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         opacity: 0.5;
-         iframe {
-            width: 683px;
-            height: 452px;
-            border: 0;
+   padding-top: 6.36%;
+   padding-bottom: 5%;
+   &__heading {
+      margin-bottom: 1.35em;
+      @include adaptiveFont(48, 28);
+      line-height: 1.2;
+      font-weight: 400;
+      color: #ffffff;
+      align-self: center;
          }
+   &__content {
+      display: flex;
+      flex-direction: column;
+      width: 56%;
+      margin: 0 auto;
+      iframe {
+         max-width: 100%;
+         aspect-ratio:16 / 9;
          &:hover {
-            opacity: 1;
+            border: 1px solid $blue;
          }
       }
+   }
 }
 
 .app {
